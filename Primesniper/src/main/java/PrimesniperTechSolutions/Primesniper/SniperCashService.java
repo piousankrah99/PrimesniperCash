@@ -14,11 +14,16 @@ public class SniperCashService {
 
     SniperCashRepository sniperCashRepository;
     SniperRepository sniperRepository;
-    public void sendCash(SniperCashDto sniperCashDto) {
+    public void sendCash(SniperDto sniperDto) {
         SniperCash sniperCash = new SniperCash();
-        sniperCash.setCash(sniperCashDto.getCash());
-        sniperCash.setMonth(Month.valueOf(sniperCashDto.getMonth().toUpperCase()));
-        sniperCash.setSniperId(sniperRepository.findById(sniperCashDto.getSniperId()).orElse(null)); // Fetching Sniper by ID
+        sniperCash.setCash(sniperDto.getCash());
+        sniperCash.setMonth(Month.valueOf(sniperDto.getMonth().toUpperCase()));
+        sniperCash.setSniperId(sniperRepository.findById(sniperDto.getSniperId()).orElse(null)); // Fetching Sniper by ID
+
+        Sniper sniper = sniperCash.getSniperId();
+        sniper.setHasCash(true);
+        sniperRepository.save(sniper);
+
 
         sniperCashRepository.save(sniperCash);
     }

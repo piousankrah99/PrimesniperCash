@@ -20,7 +20,7 @@ public class SniperCash {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name="sniper_id")
     private Sniper sniperId;
 

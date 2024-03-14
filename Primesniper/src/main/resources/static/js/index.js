@@ -279,26 +279,11 @@ function sendCash() {
 
     let cashId = $('#cashId').val()
 
-    let usernameVal = $("#usernameVal").text()
-    let birthdayVal = $('#birthdayVal').text()
-    let msisdnVal = $('#msisdnVal').text()
-    let emailVal = $("#emailVal").text()
-    let genderVal = $('#genderVal').text()
-
-
 
 
     let cashData = {
         "id": cashId,
-        "sniper": {
-            "id": sniperId,
-            "username": usernameVal,
-            "msisdn": msisdnVal,
-            "gender": genderVal,
-            "birthday": birthdayVal,
-            "email": emailVal,
-            "password": null
-        },
+        "sniperId": sniperId,
         "cash": cash,
         "month": month,
     }
