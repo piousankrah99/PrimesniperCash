@@ -1,10 +1,12 @@
 package PrimesniperTechSolutions.Primesniper;
 
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import java.time.Month;
+
 
 @Service
 @AllArgsConstructor
@@ -12,17 +14,14 @@ public class SniperCashService {
 
     SniperCashRepository sniperCashRepository;
     SniperRepository sniperRepository;
-    public void sendCash(SniperDto sniperCash){
-//        sniperCashRepository.save(sniperCash);
-        SniperCash sniperCash1 = new SniperCash();
-        sniperCash1.setCash(sniperCash1.getCash());
-        sniperCash1.setId(sniperCash.getId());
-        var sniper = sniperRepository.findById(sniperCash.getSniperId()).get();
-        sniperCash1.setSniperId(sniper);
-        sniperCashRepository.save(sniperCash1);
+    public void sendCash(SniperCashDto sniperCashDto) {
+        SniperCash sniperCash = new SniperCash();
+        sniperCash.setCash(sniperCashDto.getCash());
+        sniperCash.setMonth(Month.valueOf(sniperCashDto.getMonth().toUpperCase()));
+        sniperCash.setSniperId(sniperRepository.findById(sniperCashDto.getSniperId()).orElse(null)); // Fetching Sniper by ID
 
-    };
-
+        sniperCashRepository.save(sniperCash);
+    }
     public List<SniperCash> getAllCash() {
         return sniperCashRepository.findAll();
     }

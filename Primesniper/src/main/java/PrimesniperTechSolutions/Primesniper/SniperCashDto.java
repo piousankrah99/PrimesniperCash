@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SniperDto {
+public class SniperCashDto {
     private Long id;
     private Long sniperId;
     private String month;

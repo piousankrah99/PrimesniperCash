@@ -1,13 +1,11 @@
 package PrimesniperTechSolutions.Primesniper;
 
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
+
 @CrossOrigin(origins = "http://localhost:8082")
 
 @RestController
@@ -18,7 +16,7 @@ public class SniperCashController {
     SniperCashService sniperCashService;
 
     @PostMapping(path = "/sendCash")
-    ResponseEntity<Object> sendCash(@RequestBody SniperDto sniperCash){
+    ResponseEntity<Object> sendCash(@RequestBody SniperCashDto sniperCash){
          sniperCashService.sendCash(sniperCash);
          return ResponseEntity.ok("Cash Sent!!!");
     }
