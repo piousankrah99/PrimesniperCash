@@ -19,6 +19,10 @@ body {
     color: black;
 }
 
+button{
+    border-radius: 3rem;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -90,8 +94,8 @@ li{
 
 .addItemButton{
     position: absolute;
-    right: 5rem;
-    top: 5rem;
+    right: 2rem;
+    top: 6rem;
 }
 
 .mainCards{

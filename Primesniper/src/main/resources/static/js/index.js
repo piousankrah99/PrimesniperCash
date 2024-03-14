@@ -259,7 +259,7 @@ function addSniper() {
             console.log("ggg success", insertData);
 
             alert("Item Added successfully");
-            // Additional success handling if needed
+            location.reload();
         },
         error: function (error) {
             console.log("Error updating item: ", error);
@@ -300,7 +300,7 @@ function sendCash() {
             console.log("ggg success", cashData);
 
             alert("cashData Added successfully");
-            // Additional success handling if needed
+            location.reload();
         },
         error: function (error) {
             console.log("Error adding cash: ", error);
@@ -339,7 +339,7 @@ function updateItem() {
             console.log("ggg success", formData);
 
             alert("Update successful");
-            // Additional success handling if needed
+            location.reload();
         },
         error: function (error) {
             console.log("Error updating item: ", error);
@@ -396,7 +396,7 @@ function deleteItem(deleteData){
             console.log("Delete successful", response);
 
             alert("Delete successful");
-            // Additional success handling if needed
+            location.reload();
         },
         error: function (error) {
             console.log("Error deleting item: ", error);
