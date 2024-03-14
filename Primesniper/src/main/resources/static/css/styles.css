@@ -20,7 +20,9 @@ body {
 }
 
 button{
-    border-radius: 3rem;
+    border-radius: 7px !important;
+    background-color: #020234 !important;
+    color: white !important;
 }
 
 nav{

@@ -115,7 +115,7 @@ $(document).ready(function() {
                                             <button class="editBtn" data-id="${id}" data-gender="${gender}" data-birthday="${birthday}" onclick="openUpdateModal(this)">Edit Item</button>
                                             <button class="deleteBtn" data-id="${id}" onclick="deleteItem(this)">Delete Item</button>
                                             <button id="detailsBtn" data-id="${id}" data-email="${email}" data-msisdn="${msisdn}" data-username="${username}" data-birthday="${birthday}" data-gender="${gender}" onclick="getItemDetails(this)">Item Details</button>
-                                            <button class="btn btn-primary" data-id="${id}" data-email="${email}" data-msisdn="${msisdn}" data-username="${username}" data-birthday="${birthday}" data-gender="${gender}" onclick="openCashModal(this)">Add Cash</button>
+                                            <button class="btn" data-id="${id}" data-email="${email}" data-msisdn="${msisdn}" data-username="${username}" data-birthday="${birthday}" data-gender="${gender}" onclick="openCashModal(this)">Add Cash</button>
                                         </div>
                                     </div>
                                 `;
@@ -193,10 +193,10 @@ $(document).ready(function() {
                     <td>${birthday}</td>
                     <td>${email}</td>
                     <td colspan="2">
-                        <button class="btn btn-primary" data-id="${id}" data-gender="${gender}" data-birthday="${birthday}" onclick="openUpdateModal(this)">Edit Item</button>
-                        <button class="btn btn-danger" data-id="${id}" data-username="${username}" onclick="deleteItem(this)">Delete Item</button>
-                        <button id="detailsBtn" data-id="${id}" data-email="${email}" data-msisdn="${msisdn}" data-username="${username}" data-birthday="${birthday}" data-gender="${gender}" onclick="getItemDetails(this)">Item Details</button>
-                        <button class="btn btn-primary" data-id="${id}" data-email="${email}" data-msisdn="${msisdn}" data-username="${username}" data-birthday="${birthday}" data-gender="${gender}" onclick="openCashModal(this)">Add Cash</button>
+                        <button class="btn" data-id="${id}" data-gender="${gender}" data-birthday="${birthday}" onclick="openUpdateModal(this)">Edit Item</button>
+                        <button class="btn" data-id="${id}" data-username="${username}" onclick="deleteItem(this)">Delete Item</button>
+                        <button class="btn" id="detailsBtn" data-id="${id}" data-email="${email}" data-msisdn="${msisdn}" data-username="${username}" data-birthday="${birthday}" data-gender="${gender}" onclick="getItemDetails(this)">Item Details</button>
+                        <button class="btn" data-id="${id}" data-email="${email}" data-msisdn="${msisdn}" data-username="${username}" data-birthday="${birthday}" data-gender="${gender}" onclick="openCashModal(this)">Add Cash</button>
                     </td>
                 </tr>
             `;
