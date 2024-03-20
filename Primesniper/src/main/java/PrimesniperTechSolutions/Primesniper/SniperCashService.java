@@ -20,6 +20,7 @@ public class SniperCashService {
         sniperCash.setMonth(Month.valueOf(sniperDto.getMonth().toUpperCase()));
         sniperCash.setSniperId(sniperRepository.findById(sniperDto.getSniperId()).orElse(null)); // Fetching Sniper by ID
 
+        //Use Sniper class to set has cash to true when Sniper has cash
         Sniper sniper = sniperCash.getSniperId();
         sniper.setHasCash(true);
         sniperRepository.save(sniper);

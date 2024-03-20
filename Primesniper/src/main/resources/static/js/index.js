@@ -353,7 +353,7 @@ function updateItem() {
 
 function getItemDetails(detailsData) {
 
-
+//get
 
     document.getElementById("detailsModal").style.display = "block";
 
